@@ -1,0 +1,30 @@
+<h1>Новая СЛАУ</h1>
+<% form_for @matrix do |f| %>
+    <%= f.error_messages %>
+    <table border="1">
+      <tr>
+        <% @matrix.size.times do |i| %>
+            <th>
+              x<sub><%= i %></sub>
+            </th>
+        <% end %>
+        <th>b</th>
+      </tr>
+      <% @matrix.size.times do |i|%>
+          <tr>
+            <% @matrix.size.times do |j|%>
+                <td>
+                  <%= text_field_tag "matrix[data][#{i}][#{j}]", @matrix.data[i][j], :size => 3%>
+                </td>
+            <% end %>
+            <td>
+              <%= text_field_tag "matrix[b][#{i}]", @matrix.b[i], :size => 3  %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+
+    <p>
+      <%= f.submit 'Решить' %>
+    </p>
+<% end %>

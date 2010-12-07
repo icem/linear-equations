@@ -1,0 +1,13 @@
+<h1>Решение СЛАУ</h1>
+<% unless @matrix.errors.blank? %>
+    <div class="errorExplanation" id="errorExplanation">
+      <h2>Решение не удалось из-за следующей ошибки:</h2>
+
+      <p><%= @matrix.errors.full_messages.first %></p>
+    </div>
+<% end %>
+<ul>
+  <% @matrix.x && @matrix.x.each_with_index do |xi, i| %>
+      <li>x<sub><%= i %></sub> = <%= xi %></li>
+  <% end %>
+</ul>

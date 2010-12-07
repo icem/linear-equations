@@ -1,0 +1,7 @@
+<h1>Решение СЛАУ</h1>
+<% form_for :matrix, :url => { :action => :new } do |form|%>
+    <%= form.error_messages %>
+    <%= form.label :size, "Введите размер матрицы: " %>
+    <%= form.text_field :size, :size => 3 %>
+    <%= form.submit "Enter" %>
+<% end %>
