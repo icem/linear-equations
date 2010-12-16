@@ -1,8 +1,9 @@
 class Matrix < ActiveRecord::Base
   validate :data_validate
-  validates_numericality_of :size, :only_integer => true, :greater_than => 0
+  validates_numericality_of :size, :only_integer => true, :greater_than => 0, :less_than => 100
 
   attr_accessor :data, :b, :x
+  attr_reader :algorithm
 
   EPS = 1e-6
 
@@ -52,8 +53,17 @@ class Matrix < ActiveRecord::Base
     end
   end
 
+  def solve
+    if tridiagonal?
+      solve_tdma
+    else
+      solve_gauss
+    end
+  end
+
   def solve_gauss
-    0.upto (size-2) do |i|
+    @algorithm = "метод Гаусса"
+    0.upto(size-2) do |i|
       swap_lines(i, find_max_elem(i))
       (i+1).upto(size-1) { |j| zero_line(i, j) }
     end
@@ -67,6 +77,35 @@ class Matrix < ActiveRecord::Base
     errors.add_to_base e.message
   end
 
+  def tridiagonal?
+    @data.each_with_index do |row, i|
+      if ((row[0, i - 1] || []) + (row[i+2, row.length] || [])).detect { |c| not zero?(c) }
+        return false
+      end
+      return false if zero?(row[i])
+    end
+    true
+  end
+
+  #Solve tridiagonal matrix. Doesn't care about tridiagonal matrix format. Use +tridiagonal?+ to check.
+  def solve_tdma
+    @algorithm = "метод прогонки"
+    0.upto (size-2) do |i|
+      k = -@data[i+1][i] / @data[i][i]
+      for j in i..[i+2, size-1].min
+        @data[i+1][j] += k*@data[i][j]
+      end
+      b[i+1] += k*b[i]
+    end
+    (size-1).downto 1 do |i|
+      k = -@data[i-1][i] / @data[i][i]
+      @data[i-1][i] += k*@data[i][i]
+      b[i-1] += k*b[i]
+    end
+    @x = @data.inject_with_index([]) do |memo, row, i|
+      memo << b[i] / row[i]
+    end
+  end
 
   #Returns index of row with maximum element in column_index position, starting from column_index row
   def find_max_elem(column_index)

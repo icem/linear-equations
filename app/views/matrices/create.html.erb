@@ -6,6 +6,9 @@
       <p><%= @matrix.errors.full_messages.first %></p>
     </div>
 <% end %>
+<p class="algorithm-method">
+  Алгоритм решения: <%= @matrix.algorithm %>.
+</p>
 <ul>
   <% @matrix.x && @matrix.x.each_with_index do |xi, i| %>
       <li>x<sub><%= i %></sub> = <%= xi %></li>

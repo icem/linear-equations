@@ -18,7 +18,7 @@ class MatricesController < ApplicationController
   def create
     @matrix= Matrix.new(params[:matrix])
     if @matrix.valid?
-      @matrix.solve_gauss
+      @matrix.solve
     else
       render :action => :edit
     end

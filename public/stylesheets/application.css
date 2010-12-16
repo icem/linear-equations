@@ -1,0 +1,75 @@
+html{
+    background-color: #e4f0f3;    
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a:hover {
+    background: inherit;
+}
+
+.logo {
+    background: transparent url("/images/bsu-sign.png") no-repeat 50% 10px;
+    float: left;
+    font-size: 9px;
+    padding-top: 78px;
+    text-align: center;
+    width: 110px;
+}
+
+#signAndTitle a:hover {
+    background: inherit;
+}
+
+#signAndTitle {
+    height: 100px;
+    min-width: 300px;
+    text-align: left;
+    background-color: #002248;
+    width: 100%;
+}
+
+#signAndTitle .bsu {
+    float: right;
+    margin-right: 100px;
+    width: 300px;
+}
+
+#signAndTitle a:visited {
+    color: white;
+}
+
+#signAndTitle #title {
+    color: white;
+    font-family: "Trebuchet MS", Verdana, Lucida Grande, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+#signAndTitle a, #signAndTitle a:link, #signAndTitle a:visited, #signAndTitle a:active, #signAndTitle a:hover {
+    text-decoration: none;
+}
+
+.page-content {
+    padding: 20px 75px;
+    background-color: #e4f0f3;
+}
+
+.equations-caption {
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    float:left;
+    margin: 37px;
+}
+
+input[type=text], input[type=textarea]{
+    border-radius: 1px;
+}

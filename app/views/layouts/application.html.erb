@@ -1,17 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
   <title>Решение СЛАУ</title>
   <%= stylesheet_link_tag 'application', 'scaffold' %>
 </head>
 <body>
-<%= navigation [:root, :matrices] %>
+<div id="signAndTitle">
+  <a href="<%= root_url %>">
+    <div class="equations-caption">
+      Решение систем линейных уравнений
+    </div>
+  </a>
+
+  <div class="bsu">
+    <div id="sign" class="logo"><a href="http://www.bsu.by">www.bsu.by</a></div>
+    <div id="title"><a href="http://www.bsu.by">Белорусский<br>государственный<br>университет</a></div>
+  </div>
+</div>
+<%#= navigation [:root, :matrices] %>
 <p style="color: green"><%= notice %></p>
 
-<%= yield %>
+<div class="page-content">
+  <%= yield %>
+</div>
 
 </body>
 </html>
