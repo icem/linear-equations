@@ -4710,3 +4710,67 @@ Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:36:18) [G
 Rendering template within layouts/application
 Rendering about/tdma_method
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MatricesController#index (for 127.0.0.1 at 2010-12-19 02:50:20) [GET]
+Rendering template within layouts/application
+Rendering matrices/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#index (for 127.0.0.1 at 2010-12-19 02:50:28) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:50:30) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:52:44) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:56:22) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:57:33) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 02:59:26) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about/tdma_method]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AboutController#tdma_method (for 127.0.0.1 at 2010-12-19 03:00:16) [GET]
+Rendering template within layouts/application
+Rendering about/tdma_method
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about/tdma_method]

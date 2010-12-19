@@ -6,6 +6,11 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/index.html.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/tdma_method.html.erb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tdma/f0.png" afterPath="$PROJECT_DIR$/public/images/tdma/f0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tdma/f1.png" afterPath="$PROJECT_DIR$/public/images/tdma/f1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tdma/f2.png" afterPath="$PROJECT_DIR$/public/images/tdma/f2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tdma/f3.png" afterPath="$PROJECT_DIR$/public/images/tdma/f3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/tdma/f4.png" afterPath="$PROJECT_DIR$/public/images/tdma/f4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/application.css" afterPath="$PROJECT_DIR$/public/stylesheets/application.css" />
