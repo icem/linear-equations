@@ -1,0 +1,17 @@
+<h2>Метод прогонки для решения СЛАУ</h2>
+<p>Метод прогонки или алгоритм Томаса используется для решения систем линейных уравнений вида
+  <img src="/images/tdma/f0.png"/>, где A — трёхдиагональная матрица.</p>
+<p><img src="/images/tdma/tdma_matrix.png"/></p>
+<p>Преобразуем уравнение к эквивалентному ему уравнению</p>
+<p><img src="/images/tdma/f01.png"/></p>
+<p>c надиагональной матрицей</p>
+<p><img src="/images/tdma/tdma_matrix2.png"/></p>
+<p>Вычисления проводятся в два этапа. На первом этапе вычисляются компоненты матрицы <img src="/images/tdma/f1.png"/> и
+  вектора <img src="/images/tdma/f2.png"/>, начиная с i=2 до i=n:</p>
+<p><img src="/images/tdma/f3.png"/></p>
+<p><img src="/images/tdma/f4.png"/></p>
+<p>и <img src="/images/tdma/f5.png"/></p>
+<p><img src="/images/tdma/f6.png"/></p>
+<p>На втором этапе, для i = n, n-1, ..., 1 вычисляется решение:</p>
+<p><img src="/images/tdma/f7.png"/></p>
+<p><img src="/images/tdma/f8.png"/></p>
