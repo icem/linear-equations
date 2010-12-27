@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LinearEquations.iml" filepath="$PROJECT_DIR$/.idea/LinearEquations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/linear_equations.iml" filepath="$PROJECT_DIR$/.idea/linear_equations.iml" />
     </modules>
   </component>
 </project>

@@ -20,10 +20,14 @@
     <div id="title"><a href="http://www.bsu.by">Белорусский<br>государственный<br>университет</a></div>
   </div>
 </div>
-<%#= navigation [:root, :matrices] %>
+
 <p style="color: green"><%= notice %></p>
 
 <div class="page-content">
+  <div class="navigation-links">
+    <%= link_to "Главная", root_path %>
+    <%= link_to "Справка", about_path %>
+  </div>
   <%= yield %>
 </div>
 

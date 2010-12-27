@@ -1,6 +1,7 @@
-html{
-    background-color: #e4f0f3;    
+html {
+    background-color: #e4f0f3;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -66,11 +67,20 @@ a:hover {
     font-weight: bold;
     font-size: 32px;
     color: #fff;
-    float:left;
+    float: left;
     margin: 17px;
     line-height: 100%;
 }
 
-input[type=text], input[type=textarea]{
+input[type=text], input[type=textarea] {
     border-radius: 1px;
+}
+
+.navigation-links a {
+    margin-left: 12px;
+}
+
+.navigation-links a:hover {
+    background: inherit;
+    color: #002248;
 }

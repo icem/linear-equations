@@ -1,9 +1,10 @@
+# coding: utf-8
 class Matrix < ActiveRecord::Base
   validate :data_validate
   validates_numericality_of :size, :only_integer => true, :greater_than => 0, :less_than => 100
 
   attr_accessor :data, :b, :x
-  attr_reader :algorithm
+  attr_reader :algorithm, :timer
 
   EPS = 1e-6
 
@@ -63,6 +64,7 @@ class Matrix < ActiveRecord::Base
 
   def solve_gauss
     @algorithm = "метод Гаусса"
+    @timer = Time.now
     0.upto(size-2) do |i|
       swap_lines(i, find_max_elem(i))
       (i+1).upto(size-1) { |j| zero_line(i, j) }
@@ -75,6 +77,9 @@ class Matrix < ActiveRecord::Base
     end
   rescue ArgumentError => e
     errors.add_to_base e.message
+  ensure
+    @timer = Time.now - @timer
+    logger.info "size = #{size}; solve_gauss: @timer = #{@timer}"
   end
 
   def tridiagonal?
@@ -136,5 +141,23 @@ class Matrix < ActiveRecord::Base
 
   def zero?(value)
     value.abs < EPS
+  end
+
+  MAX_DATA_NUM = 100
+  #create random matrix with current size
+  def randomize
+    @data = @data.map do |row|
+      row.map do |cell|
+          rand(MAX_DATA_NUM).to_f
+      end
+    end
+    @b = @b.map do |cell|
+      rand(MAX_DATA_NUM).to_f
+    end
+    logger.info "RANDOMIZED @data:"
+    logger.info @data.inspect
+    logger.info "RANDOMIZED @b:"    
+    logger.info @b.inspect
+    self
   end
 end
